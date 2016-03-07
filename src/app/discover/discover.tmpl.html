@@ -1,0 +1,96 @@
+<nav class="navbar navbar-defaul custom-header">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="row">
+    	<div class="col-xs-12">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		     <a class="navbar-brand" href ui-sref="home"><img width="50" src="assets/images/logoff.png"></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href ui-sref="home">Home</a></li>
+		        <li><a class="active"  href ui-sref="discover">Discover</a></li>
+		        <li><a ui-sref="area">Reach the area</a></li>
+		        <li><a ui-sref="wedding">Wedding day</a></li>
+		        <li><a href ui-sref="contact">Contacts</a></li>
+		      </ul>
+		    </div> 
+		 </div>
+ 	</div>
+  </div> 
+</nav>
+<section class="main discover">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8">
+				<h1>Discover Lake Como</h1>
+				<p>Lake Como is known for its beautiful landscape, romantic villas and the spectacular backdrop of the Grigna mountains.</p>
+				<p>Menaggio, Tremezzo and Lenno sit on the sunny western shore and have beautiful lakeside promenades. Have a walk, take a sit on a café, enjoy a good glass of wine and admire the fantastic views across the water.</p>
+				<p>On the southern shore you'll find Bellagio, probably the most famous location in lake Como. Thanks to its particular position you can enjoy breath taking views across the lake from both sides of the town.</p>
+				<p>Lake Como is surrounded by high mountains and cliffs, this make it different from the other Italian lakes and unique for the range of experiences it can offer to its visitors. A narrow road runs up its western coast towards Switzerland and sits up high above the water, with the towns dropping down beneath it. Famous for its beautifully kept public gardens and historic villas, it's easy to see why this location is considered one of the most charming in Europe.</p>
+				<p>Join us and have a great time!</p>
+			</div>	
+			<div class="col-xs-12 col-sm-4" id="map">
+				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9t3YUbu86rpFnw-LduchnslcmPGsWW1k&signed_in=true&callback=initMap"></script>
+		 	</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row gallery-grid">
+			<div class="col-xs-12">
+				<h3>What to do</h3>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Mount Galbiga</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('hiking')"><img width="300" src="assets/images/hiking-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('hiking')">Experience heartbreaking views</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Isola Comacina</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('comacina')"><img width="300" src="assets/images/comacina-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('comacina')">History, mystery, adventure</a>
+			</div>	
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Sighignola</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('sighignola')"><img width="300" src="assets/images/sighignola-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('sighignola')">Balcony of Italy</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Villa Balbianello</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('balbianello')"><img width="300" src="assets/images/balbianello-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('balbianello')">Walk through its terraced gardens</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Villa Carlotta</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('carlotta')"><img width="300" src="assets/images/carlotta-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('carlotta')">Discover the botanical gardens</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Lenno</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('lenno')"><img width="300" src="assets/images/lenno-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('lenno')">Have a walk and relax</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Bellagio</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('bellagio')"><img width="300" src="assets/images/bellagio-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('bellagio')">The real one, not the casino</a>
+			</div>
+		</div>
+	</div>
+</section> 
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+				<p>For info please write at <a href="mailto:francesco.greppi@gmail.com">francesco.greppi@gmail.com</a></p>
+				<p>©2016 Francesco Greppi &amp; Fatiha Kaizane. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>

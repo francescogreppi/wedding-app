@@ -1,0 +1,74 @@
+<nav class="navbar navbar-defaul custom-header">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="row">
+    	<div class="col-xs-12">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href ui-sref="home"><img width="50" src="assets/images/logoff.png"></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href ui-sref="home">Home</a></li>
+		        <li><a href ui-sref="discover">Discover</a></li>
+		        <li><a href ui-sref="area">Reach the area</a></li>
+		        <li><a href ui-sref="wedding">Wedding day</a></li>
+		        <li><a class="active" href ui-sref="contact">Contacts</a></li>
+		      </ul>
+		    </div> 
+		 </div>
+ 	</div>
+  </div> 
+</nav>
+<section class="main contact">
+	<div class="container">
+		<div class="row topic">
+			<div class="col-xs-12 col-sm-12">
+				<h1>Any question ?</h1>
+				<p>We are happy to help! Write us.</p>
+				
+				<form class="col-xs-12 col-sm-6" name="contactForm" ng-submit="contactCtrl.sendData()">
+					<div class="input-group input-group-lg">
+					  <label>Name</label>
+					  <input type="text" class="form-control" name="userName" placeholder="Your name" aria-describedby="sizing-addon1" ng-model="contactCtrl.username" required>
+					  <div ng-messages="contactForm.userName.$error" ng-show="contactForm.$submitted || contactForm.userName.$touched" role="alert">
+					    <div ng-message="required" class="help">Please tell us your name</div>
+					  </div>
+					</div>
+					<div class="input-group input-group-lg">
+					  <label>Email</label>
+					  <input type="text" class="form-control" name="Email" placeholder="Your email" aria-describedby="sizing-addon1"  ng-model="contactCtrl.email" required>
+					  <div ng-messages="contactForm.Email.$error" ng-show="contactForm.$submitted || contactForm.Email.$touched" role="alert">
+					    <div ng-message="required" class="help">Please tell us your email</div>
+					  </div>
+					</div>
+					<div class="input-group input-group-lg">
+					  <label>Question</label>
+					  <input type="text" class="form-control" name="Question" placeholder="Send us a request" aria-describedby="sizing-addon1"  ng-model="contactCtrl.question" required>
+					  <div ng-messages="contactForm.Question.$error" ng-show="contactForm.$submitted || contactForm.Question.$touched" role="alert">
+					    <div ng-message="required" class="help">Please ask any question</div>
+					  </div>
+					</div>
+					<button type="submit" class="btn btn-submit">Submit</button>
+					<p ng-if="contactCtrl.isLoading">Submitting your request</p>
+					<p ng-if="contactCtrl.complete">Request succesfully submitted</p>
+				</form>
+			</div>
+		</div>
+	</div>
+</section> 
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+				<p>For info please write at <a href="mailto:francesco.greppi@gmail.com">francesco.greppi@gmail.com</a></p>
+				<p>©2016 Francesco Greppi &amp; Fatiha Kaizane. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>

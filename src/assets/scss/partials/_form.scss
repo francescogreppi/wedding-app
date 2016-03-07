@@ -1,0 +1,21 @@
+form {
+
+	label{
+		margin: 10px 0;
+	}
+	.help{
+		color:red;
+		margin-top:4px;
+	}
+	.btn-submit{
+		background: $color-dark-bg;
+		color:#ffffff;
+		margin: 20px 0;
+		min-width:200px;
+		padding: 10px 0;
+		&:hover{
+			opacity: 0.8;
+			color:#fff;
+		}
+	}
+}
