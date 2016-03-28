@@ -7,21 +7,19 @@
     }
 
     &.second{
-        background: url(../images/slider2.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: left;
     }
-}
+    
+    &.third{
+        background: url(../images/slider3.jpg);
+        background-size: cover;
+        background-position: top;
+    }
+  }
 
 .carousel-custom{
       position:absolute;
       left: 10%;
       bottom: 20px;
-      
-      p{
-      color: $color-white;
-      font-family: 'PT Sans', sans-serif;
-      font-size: 14px;
-      text-shadow: 1px 1px 2px #000000, 0 0 15px #000000, 0 0 5px #000000;
-      }
 }

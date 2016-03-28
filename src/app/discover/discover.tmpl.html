@@ -31,9 +31,9 @@
 			<div class="col-xs-12 col-sm-8">
 				<h1>Discover Lake Como</h1>
 				<p>Lake Como is known for its beautiful landscape, romantic villas and the spectacular backdrop of the Grigna mountains.</p>
-				<p>Menaggio, Tremezzo and Lenno sit on the sunny western shore and have beautiful lakeside promenades. Have a walk, take a sit on a café, enjoy a good glass of wine and admire the fantastic views across the water.</p>
-				<p>On the southern shore you'll find Bellagio, probably the most famous location in lake Como. Thanks to its particular position you can enjoy breath taking views across the lake from both sides of the town.</p>
-				<p>Lake Como is surrounded by high mountains and cliffs, this make it different from the other Italian lakes and unique for the range of experiences it can offer to its visitors. A narrow road runs up its western coast towards Switzerland and sits up high above the water, with the towns dropping down beneath it. Famous for its beautifully kept public gardens and historic villas, it's easy to see why this location is considered one of the most charming in Europe.</p>
+				<p>Menaggio, Tremezzo and Lenno sit on the sunny western shore and have beautiful lakeside promenades. Have a walk, take a sit on a café, enjoy a good glass of wine and admire the fantastic view of the lake.</p>
+				<p>On the southern shore you'll find Bellagio, probably the most famous location in lake Como. Thanks to its particular position, you can enjoy breathtaking view of the lake from both sides of the town.</p>
+				<p>Lake Como is surrounded by high mountains and cliffs. These characteristics make Lake Como different from the other Italian lakes and unique for the range of experiences it can offer to its visitors. A narrow road runs up its western coast towards Switzerland and sits up high above the water, with the charming towns scattered beneath it. Famous for its beautifully kept public gardens and historic villas, it's easy to see why this location is considered one of the most charming in Europe.</p>
 				<p>Join us and have a great time!</p>
 			</div>	
 			<div class="col-xs-12 col-sm-4" id="map">
@@ -44,51 +44,95 @@
 	<div class="container">
 		<div class="row gallery-grid">
 			<div class="col-xs-12">
-				<h3>What to do</h3>
+				<h3>What to see?</h3>
 			</div>
 			<div class="col-sm-6 col-md-4 text-center">
 				<p>Mount Galbiga</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('hiking')"><img width="300" src="assets/images/hiking-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('hiking')"><img width="300" height="225" src="assets/images/hiking-thumb.jpg"/></a>
 				<a href ng-click="discoverCtrl.showGalleryModal('hiking')">Experience heartbreaking views</a>
 			</div>
 			<div class="col-sm-6 col-md-4 text-center">
 				<p>Isola Comacina</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('comacina')"><img width="300" src="assets/images/comacina-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('comacina')"><img width="300" height="225" src="assets/images/comacina-thumb.jpg"/></a>
 				<a href ng-click="discoverCtrl.showGalleryModal('comacina')">History, mystery, adventure</a>
 			</div>	
 			<div class="col-sm-6 col-md-4 text-center">
 				<p>Sighignola</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('sighignola')"><img width="300" src="assets/images/sighignola-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('sighignola')"><img width="300" height="225" src="assets/images/sighignola-thumb.jpg"/></a>
 				<a href ng-click="discoverCtrl.showGalleryModal('sighignola')">Balcony of Italy</a>
 			</div>
 			<div class="col-sm-6 col-md-4 text-center">
 				<p>Villa Balbianello</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('balbianello')"><img width="300" src="assets/images/balbianello-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('balbianello')"><img width="300" height="225" src="assets/images/balbianello-thumb.jpg"/></a>
 				<a href ng-click="discoverCtrl.showGalleryModal('balbianello')">Walk through its terraced gardens</a>
 			</div>
 			<div class="col-sm-6 col-md-4 text-center">
 				<p>Villa Carlotta</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('carlotta')"><img width="300" src="assets/images/carlotta-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('carlotta')"><img width="300" height="225" src="assets/images/carlotta-thumb.jpg"/></a>
 				<a href ng-click="discoverCtrl.showGalleryModal('carlotta')">Discover the botanical gardens</a>
 			</div>
 			<div class="col-sm-6 col-md-4 text-center">
 				<p>Lenno</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('lenno')"><img width="300" src="assets/images/lenno-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('lenno')"><img width="300" height="225" src="assets/images/lenno-thumb.jpg"/></a>
 				<a href ng-click="discoverCtrl.showGalleryModal('lenno')">Have a walk and relax</a>
 			</div>
 			<div class="col-sm-6 col-md-4 text-center">
 				<p>Bellagio</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('bellagio')"><img width="300" src="assets/images/bellagio-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('bellagio')"><img width="300" height="225" src="assets/images/bellagio-thumb.jpg"/></a>
 				<a href ng-click="discoverCtrl.showGalleryModal('bellagio')">The real one, not the casino</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Menaggio</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('menaggio')"><img width="300" height="225" src="assets/images/menaggio1-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('menaggio')">The biggest village of Lake Como</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Como</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('como')"><img width="300" height="225" src="assets/images/como1-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('como')">The charming historic city</a>
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div class="row gallery-grid">
+			<div class="col-xs-12">
+				<h3>What to eat and drink?</h3>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Parmesan Grana Padano</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('parmesan')"><img width="300" height="225" src="assets/images/parmesan1-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('parmesan')">Deliciously cheesy!</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Polenta</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('polenta')"><img width="300" height="225" src="assets/images/polenta1-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('polenta')">Speciality from the north</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Pizzoccheri</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('pizzoccheri')"><img width="300" height="225" src="assets/images/pizzoccheri1-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('pizzoccheri')">Cheesy delicious</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Valtellina Wine</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('vino')"><img width="300" height="225" src="assets/images/vino1-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('vino')">To combine with the perfect meal</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Grappa</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('grappa')"><img width="300" height="225" src="assets/images/grappa1-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('grappa')">Italy's most famous digestive</a>
+			</div>
+			<div class="col-sm-6 col-md-4 text-center">
+				<p>Limoncello</p>
+				<a href ng-click="discoverCtrl.showGalleryModal('limoncello')"><img width="300" height="225" src="assets/images/limoncello-thumb.jpg"/></a>
+				<a href ng-click="discoverCtrl.showGalleryModal('limoncello')">The most refreshing liquor</a>
+			</div>
 </section> 
 <footer>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
-				<p>For info please write at <a href="mailto:francesco.greppi@gmail.com">francesco.greppi@gmail.com</a></p>
 				<p>©2016 Francesco Greppi &amp; Fatiha Kaizane. All Rights Reserved.</p>
 			</div>
 		</div>
