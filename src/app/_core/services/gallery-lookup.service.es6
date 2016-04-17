@@ -21,15 +21,10 @@ export let GalleryService = function GalleryService() {
                             id: 3,
                             active: false,
                             name: "hiking4.jpg"
-                        },
-                        {
-                            id: 4,
-                            active: false,
-                            name: "hiking5.jpg"
                         }
                     ],                
                 title: 'Mount Galbiga',
-                url: 'http://www.mountain.com'
+                url: 'http://www.visitlakecomo.it/en/itinerario-monte-di-tremezzo-1700m-galbiga-1698m-crocione-1641m/'
             },
             comacina: {
                 image: [
@@ -45,7 +40,7 @@ export let GalleryService = function GalleryService() {
                         }
                     ],                
                 title: 'Isola Comacina',
-                url: 'http://www.isola-comacina.it/'
+                url: 'http://www.isola-comacina.it/en/'
             },
             sighignola: {
                 image: [
@@ -61,7 +56,7 @@ export let GalleryService = function GalleryService() {
                         }
                     ],                
                 title: 'Sighignola',
-                url: 'https://en.wikipedia.org/wiki/Sighignola'
+                url: 'https://www.youtube.com/watch?v=jKeE7dgKWB4'
             },
             balbianello: {
                 image: [
@@ -82,7 +77,7 @@ export let GalleryService = function GalleryService() {
                         }
                     ],                
                 title: 'Villa Balbianello',
-                url: 'https://en.wikipedia.org/wiki/Villa_del_Balbianello'
+                url: 'https://www.youtube.com/watch?v=5vj4V6ZAT4Y'
             },
             carlotta: {
                 image: [
@@ -103,7 +98,7 @@ export let GalleryService = function GalleryService() {
                         }
                     ],                
                 title: 'Villa Carlotta',
-                url: 'http://www.villacarlotta.it/home.php?lang_id=2'
+                url: 'https://www.youtube.com/watch?v=EPShKx9IjLw'
             },
             lenno: {
                 image: [
@@ -134,7 +129,7 @@ export let GalleryService = function GalleryService() {
                         }
                     ],                
                 title: 'Lenno',
-                url: 'https://en.wikipedia.org/wiki/Sighignola'
+                url: 'https://www.youtube.com/watch?v=-Hno6IVBTzk'
             },
             bellagio: {
                 image: [
@@ -155,7 +150,180 @@ export let GalleryService = function GalleryService() {
                         }
                     ],                
                 title: 'Bellagio',
-                url: 'https://en.wikipedia.org/wiki/Bellagio,_Lombardy'
+                url: 'https://www.youtube.com/watch?v=YGPURvKIWuQ'
+            },
+            menaggio: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "menaggio1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "menaggio2.jpg"
+                        },
+                        {
+                            id: 2,
+                            active: false,
+                            name: "menaggio3.jpg"
+                        },
+                        {
+                            id: 3,
+                            active: false,
+                            name: "menaggio4.jpg"
+                        },
+                        {
+                            id: 4,
+                            active: false,
+                            name: "menaggio5.jpg"
+                        },
+                        {
+                            id: 5,
+                            active: false,
+                            name: "menaggio6.jpg"
+                        }
+                    ],                
+                title: 'Menaggio',
+                url: 'https://www.youtube.com/watch?v=vMRr49ReDo4'
+            },
+            como: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "como1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "como2.jpg"
+                        },
+                        {
+                            id: 2,
+                            active: false,
+                            name: "como3.jpg"
+                        },
+                        {
+                            id: 3,
+                            active: false,
+                            name: "como4.jpg"
+                        }
+                    ],                
+                title: 'Como',
+                url: 'https://www.youtube.com/watch?v=pNmTw5u1zew'
+            },
+            parmesan: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "parmesan1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "parmesan2.jpg"
+                        }
+                    ],                
+                title: 'Parmesan Grana Padano',
+                url: 'https://www.youtube.com/watch?v=HNyOSmsQVlA'
+            },
+            polenta: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "polenta1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "polenta2.jpg"
+                        },
+                        {
+                            id: 2,
+                            active: false,
+                            name: "polenta3.jpg"
+                        }
+                    ],                
+                title: 'Polenta',
+                url: 'http://www.lifeinitaly.com/food/polenta.asp'
+            },
+            pizzoccheri: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "pizzoccheri1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "pizzoccheri2.jpg"
+                        }
+                    ],                
+                title: 'Pizzoccheri',
+                url: 'http://www.deliciousdays.com/archives/2007/02/16/pizzoccheri-della-valtellina-embracing-comfort-food/'
+            },
+            vino: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "vino1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "vino2.jpg"
+                        },
+                        {
+                            id: 2,
+                            active: false,
+                            name: "vino3.jpg"
+                        }
+                    ],                
+                title: 'Valtellina Wine',
+                url: 'https://www.youtube.com/watch?v=1UnAtY0vXcI'
+            },
+            grappa: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "grappa1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "grappa2.jpg"
+                        }
+                    ],                
+                title: 'Grappa',
+                url: 'https://www.youtube.com/watch?v=yLafIQ1Xd9E'
+            },
+            limoncello: {
+                image: [
+                        {
+                            id: 0,
+                            active: true,
+                            name: "limoncello1.jpg"
+                        },
+                        {
+                            id: 1,
+                            active: false,
+                            name: "limoncello2.jpg"
+                        },
+                        {
+                            id: 2,
+                            active: false,
+                            name: "limoncello3.jpg"
+                        }
+                    ],                
+                title: 'Limoncello',
+                url: 'https://www.youtube.com/watch?v=AWZlnMmnE3I'
             }
     }
 

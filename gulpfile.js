@@ -17,7 +17,8 @@ var gulp = require('gulp'),
 	watchify = require('watchify'),
 	babel = require('babelify'),
 	uglify = require('gulp-uglify'),
-	clean = require('gulp-clean');
+	clean = require('gulp-clean'),
+	wait = require('gulp-wait');
 
 // copy vendor css into dist folder 
 gulp.task('copyVendorCSS', function(){
@@ -33,7 +34,7 @@ gulp.task('copyVendorFonts', function(){
 })
 // copy angularjs, jquery etc
 gulp.task('copyVendorJS', function(){
-	return gulp.src(['bower_components/**/*.min.js', 'src/assets/js/google-map.js', 'bower_components/**/firebase.js'])
+	return gulp.src(['bower_components/**/*.min.js', 'src/assets/js/google-map.js', 'bower_components/**/firebase.js', 'node_modules/angular-animate/angular-animate.min.js'])
 		   .pipe(flatten())
 		   .pipe(gulp.dest('dist/assets/js/vendor'));
 })
@@ -126,7 +127,7 @@ gulp.task('serve',['build'], function(){
 
 // build
 gulp.task('build', function(done){
-	runSequence('clean','image','copyVendors','copyHtml', 'compileAppCss','compileAppJs', done);  
+	runSequence('clean','image','copyVendors','copyHtml', 'compileAppCss','compileAppJs', 'wait', done);  
 })
 
 // copy vendors
@@ -135,8 +136,13 @@ gulp.task('copyVendors', function(){
 })
 
 // compile app for watch
-gulp.task('appSequence', function(){
-	runSequence('compileAppCss','compileAppJs','copyHtml','inject','reload');  
+gulp.task('appSequence', function(done){
+	runSequence('compileAppCss','compileAppJs','copyHtml','inject','reload', done);  
+})
+
+gulp.task('wait', function(done){
+	return gulp.src('dist', {read: false})
+	.pipe(wait(2000));  
 })
 
 // watch

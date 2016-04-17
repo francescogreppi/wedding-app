@@ -1,0 +1,186 @@
+<nav class="navbar navbar-default custom-header">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="row">
+    	<div class="col-xs-12">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		     <a class="navbar-brand" href ui-sref="home"><img width="50" src="assets/images/logoff.png"></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a ui-sref="home">Home</a></li>
+		        <li><a ui-sref="discover">Discover</a></li>
+		         <li><a class="active" ui-sref="activities">Activities</a></li>
+		        <li><a ui-sref="area">Reach the area</a></li>
+		        <li><a ui-sref="wedding">Wedding day</a></li>
+		        <li><a ui-sref="contact">Contacts</a></li>
+		      </ul>
+		    </div> 
+		 </div>
+ 	</div>
+  </div> 
+</nav>
+<section class="main activities text-center">
+	<div class="container">
+		<div class="row gallery-grid">
+			<div class="col-sm-12">
+				<h4>What to see?</h4>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+						<p class="intro">There's plenty of places to visit and activities to do in lake Como, below you can have a look to a first selection.<br/>However, <span >stay tuned</span>! We'll update with new activities and venues, and if you come a few days before the wedding, <span>we'll be happy to be your touristic guide</span>!</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('hiking')"><img src="assets/images/hiking-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('hiking')">Mount Galbiga <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('comacina')" ><img src="assets/images/comacina-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('comacina')">Isola Comacina <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>	
+			
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('balbianello')"><img src="assets/images/balbianello-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('balbianello')">Villa Balbianello <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('carlotta')"><img src="assets/images/carlotta-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('carlotta')">Villa Carlotta <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('lenno')"><img src="assets/images/lenno-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('lenno')">Lenno <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('bellagio')"><img src="assets/images/bellagio-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('bellagio')">Bellagio <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('menaggio')"><img src="assets/images/menaggio1-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('menaggio')">Menaggio <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('como')"><img src="assets/images/como1-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('como')">Como <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('sighignola')" ><img src="assets/images/sighignola-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('sighignola')">Sighignola <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row gallery-grid">
+			<div class="col-xs-12">
+				<h4>What to eat and drink?</h4>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+						<p class="intro">Are you doing diet? Forget it, for a couple of days at least. Lake Como area has a lot to offer in terms of food and drink, just sit down and let yourself go. From lake fish to local meat, cheese and wine, there's plenty of culinaires experiences you can do.<br/> The north of the lake open it's way to <span>Valtellina</span>, a spectacular area known for its wines and food tradition. </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('parmesan')"><img src="assets/images/parmesan1-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('parmesan')">Parmesan Grana Padano <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('polenta')" ><img src="assets/images/polenta1-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('polenta')">Polenta Valtellinese <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('pizzoccheri')" ><img src="assets/images/pizzoccheri1-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('pizzoccheri')">Pizzoccheri <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('vino')" ><img src="assets/images/vino1-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('vino')">Valtellina's Wines <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('grappa')"><img src="assets/images/grappa1-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('grappa')">Grappa <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-4 col-md-3 text-center">
+				<figure>
+					<a href ng-click="activitiesCtrl.showGalleryModal('limoncello')"><img src="assets/images/limoncello-thumb.jpg" alt="img01"></a>
+					<figcaption>
+						<a href ng-click="activitiesCtrl.showGalleryModal('limoncello')">Limoncello <span>Take a look</span></a>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+				<p>©2016 Francesco Greppi &amp; Fatiha Kaizane. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>

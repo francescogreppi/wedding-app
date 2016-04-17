@@ -1,3 +1,32 @@
 .modal-dialog {
-	width:50%;
+.carousel-inner>.item {
+	min-height:0;
 }
+
+.x-btn{
+	border:none;
+	background-color:transparent;
+	&:hover{
+		background-color:transparent;
+	}
+	&:focus{
+		outline:none;
+	}
+}
+
+.modal-footer{
+	.btn{
+		background: $color-dark-bg;
+		color:#ffffff;
+		margin: 20px 0;
+		min-width:200px;
+		padding: 10px 0;
+		&:hover{
+			opacity: 0.8;
+			color:#fff;
+		}
+	}
+
+}
+}
+
