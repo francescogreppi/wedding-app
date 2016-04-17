@@ -8,45 +8,13 @@ var map,
   areaCoords;
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 45.972870, lng: 9.196177},
-    zoom: 10,
-    scrollwheel: false
-  });
-  marker = new google.maps.Marker({
-    animation: google.maps.Animation.DROP,
-    position: {lat: 45.972870, lng: 9.196177},
-    map: map,
-    title: 'Discover Lake Como'
-  });
-
-  infowindow = new google.maps.InfoWindow({
-    content: "<p><strong>Lenno</strong></p><p>Francesco's place</p>"
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-   infowindow.open(map,marker);
-	});
-	infowindow.open(map,marker);
-
-
-  marker.setMap(map);
-}
-
-function initDirectionMap() {
-  directionsService = new google.maps.DirectionsService;
-  directionsDisplay = new google.maps.DirectionsRenderer;
-  directionMap = new google.maps.Map(document.getElementById('directionMap'), {
-    zoom: 7,
-    center: {lat: 41.85, lng: -87.65},
-    scrollwheel: false
-  });
-  areaMap = new google.maps.Map(document.getElementById('areaMap'), {
+   areaMap = new google.maps.Map(document.getElementById('areaMap'), {
     zoom: 12,
     center: {lat: 45.997946, lng: 9.241292},
     scrollwheel: false
   });
-  // Define the LatLng coordinates for the polygon's path.
+
+   // Define the LatLng coordinates for the polygon's path.
   areaCoords = [
     {lat: 45.969225, lng: 9.174320},
     {lat: 45.965713, lng: 9.182238},
@@ -61,6 +29,7 @@ function initDirectionMap() {
     {lat: 45.976680, lng: 9.185371},
     {lat: 45.972154, lng: 9.174889}
   ];
+
    // Construct the polygon.
   areaPerimeter = new google.maps.Polygon({
     paths: areaCoords,
@@ -71,8 +40,19 @@ function initDirectionMap() {
     fillOpacity: 0.35
   });
 
-  directionsDisplay.setMap(directionMap);
   areaPerimeter.setMap(areaMap);
+}
+
+function initDirectionMap() {
+  directionsService = new google.maps.DirectionsService;
+  directionsDisplay = new google.maps.DirectionsRenderer;
+  directionMap = new google.maps.Map(document.getElementById('directionMap'), {
+    zoom: 7,
+    center: {lat: 41.85, lng: -87.65},
+    scrollwheel: false
+  });
+ 
+  directionsDisplay.setMap(directionMap);
   calculateAndDisplayRoute(directionsService, directionsDisplay);
 }
 

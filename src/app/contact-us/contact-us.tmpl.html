@@ -1,4 +1,4 @@
-<nav class="navbar navbar-defaul custom-header">
+<nav class="navbar navbar-default custom-header">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="row">
@@ -9,6 +9,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href ui-sref="home"><img width="50" src="assets/images/logoff.png"></a>
 		    </div>
@@ -16,6 +17,7 @@
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><a href ui-sref="home">Home</a></li>
 		        <li><a href ui-sref="discover">Discover</a></li>
+		         <li><a href ui-sref="activities">Activities</a></li>
 		        <li><a href ui-sref="area">Reach the area</a></li>
 		        <li><a href ui-sref="wedding">Wedding day</a></li>
 		        <li><a class="active" href ui-sref="contact">Contacts</a></li>
@@ -25,36 +27,37 @@
  	</div>
   </div> 
 </nav>
-<section class="main contact">
+<section class="main contact text-center">
 	<div class="container">
 		<div class="row topic">
-			<div class="col-xs-12 col-sm-12">
+			<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 				<h1>Any question ?</h1>
-				<p>We are happy to help! Write us.</p>
-				
-				<form class="col-xs-12 col-sm-6" name="contactForm" ng-submit="contactCtrl.sendData()">
+				<p class="intro">We are happy to help! Write us.</p>
+				<form class="contact-form" name="contactForm" ng-submit="contactCtrl.sendData()" novalidate autocomplete="off">
 					<div class="input-group input-group-lg">
 					  <label>Name</label>
-					  <input type="text" class="form-control" name="userName" placeholder="Your name" aria-describedby="sizing-addon1" ng-model="contactCtrl.username" required>
+					  <input type="text" class="form-control" name="userName" placeholder="Your name" ng-pattern="/^[a-zA-Z]{2,}$/" ng-model="contactCtrl.username" required>
 					  <div ng-messages="contactForm.userName.$error" ng-show="contactForm.$submitted || contactForm.userName.$touched" role="alert">
 					    <div ng-message="required" class="help">Please tell us your name</div>
+					    <div ng-message="pattern" class="help">Please insert a valid name</div>
 					  </div>
 					</div>
 					<div class="input-group input-group-lg">
 					  <label>Email</label>
-					  <input type="text" class="form-control" name="Email" placeholder="Your email" aria-describedby="sizing-addon1"  ng-model="contactCtrl.email" required>
+					  <input type="text" class="form-control" name="Email" placeholder="Your email" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/"ng-model="contactCtrl.email" required>
 					  <div ng-messages="contactForm.Email.$error" ng-show="contactForm.$submitted || contactForm.Email.$touched" role="alert">
 					    <div ng-message="required" class="help">Please tell us your email</div>
+					    <div ng-message="pattern" class="help">Please insert a valid email</div>
 					  </div>
 					</div>
 					<div class="input-group input-group-lg">
 					  <label>Question</label>
-					  <input type="text" class="form-control" name="Question" placeholder="Send us a request" aria-describedby="sizing-addon1"  ng-model="contactCtrl.question" required>
+					  <textarea type="text" class="form-control" name="Question" placeholder="Send us a request" ng-model="contactCtrl.question" required></textarea>
 					  <div ng-messages="contactForm.Question.$error" ng-show="contactForm.$submitted || contactForm.Question.$touched" role="alert">
 					    <div ng-message="required" class="help">Please ask any question</div>
 					  </div>
 					</div>
-					<button type="submit" class="btn btn-submit">Submit</button>
+					<button type="submit" class="btn btn-submit" ng-disabled="contactForm.$invalid || contactCtrl.isLoading">Submit</button>
 					<p ng-if="contactCtrl.isLoading">Submitting your request</p>
 					<p ng-if="contactCtrl.complete">Request succesfully submitted</p>
 				</form>

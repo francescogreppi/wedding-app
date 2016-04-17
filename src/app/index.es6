@@ -1,12 +1,13 @@
 import { HomeController } from './home/home.controller.es6';
 import { DiscoverController } from './discover/discover.controller.es6';
 import { AreaController } from './area/area.controller.es6';
-import { GalleryModalController } from './discover/gallery-modal.controller.es6';
+import { ActivitiesController } from './activities/activities.controller.es6';
+import { GalleryModalController } from './activities/gallery-modal.controller.es6';
 import { WeddingController } from './wedding/wedding.controller.es6';
 import { ContactController } from './contact-us/contact.controller.es6';
 import { GalleryService } from './_core/services/gallery-lookup.service.es6';
 
-let app = angular.module('marriageApp', ['firebase', 'ui.router','ui.bootstrap', 'ngMessages'])
+let app = angular.module('marriageApp', ['firebase', 'ui.router','ui.bootstrap', 'ngMessages', 'ngAnimate'])
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		  $urlRouterProvider.otherwise("/");
 		  //
@@ -29,6 +30,16 @@ let app = angular.module('marriageApp', ['firebase', 'ui.router','ui.bootstrap',
 						templateUrl: 'app/discover/discover.tmpl.html',
 						controller: 'DiscoverController',
 						controllerAs: 'discoverCtrl'
+					}
+				}
+			})
+			.state('activities', {
+				url: '/activities',
+				views: {
+					'': {
+						templateUrl: 'app/activities/activities.tmpl.html',
+						controller: 'ActivitiesController',
+						controllerAs: 'activitiesCtrl'
 					}
 				}
 			})
@@ -66,6 +77,7 @@ let app = angular.module('marriageApp', ['firebase', 'ui.router','ui.bootstrap',
     .controller('HomeController', HomeController)
     .controller('AreaController', AreaController)
     .controller('DiscoverController', DiscoverController)
+    .controller('ActivitiesController', ActivitiesController)
     .controller('GalleryModalController', GalleryModalController)
     .controller('ContactController', ContactController)
     .controller('WeddingController', WeddingController)

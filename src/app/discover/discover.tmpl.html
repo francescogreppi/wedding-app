@@ -1,4 +1,4 @@
-<nav class="navbar navbar-defaul custom-header">
+<nav class="navbar navbar-default custom-header">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="row">
@@ -9,6 +9,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
 		      </button>
 		     <a class="navbar-brand" href ui-sref="home"><img width="50" src="assets/images/logoff.png"></a>
 		    </div>
@@ -16,6 +17,7 @@
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><a href ui-sref="home">Home</a></li>
 		        <li><a class="active"  href ui-sref="discover">Discover</a></li>
+		         <li><a href ui-sref="activities">Activities</a></li>
 		        <li><a ui-sref="area">Reach the area</a></li>
 		        <li><a ui-sref="wedding">Wedding day</a></li>
 		        <li><a href ui-sref="contact">Contacts</a></li>
@@ -25,110 +27,35 @@
  	</div>
   </div> 
 </nav>
-<section class="main discover">
+<section class="main discover text-center">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-8">
-				<h1>Discover Lake Como</h1>
-				<p>Lake Como is known for its beautiful landscape, romantic villas and the spectacular backdrop of the Grigna mountains.</p>
-				<p>Menaggio, Tremezzo and Lenno sit on the sunny western shore and have beautiful lakeside promenades. Have a walk, take a sit on a café, enjoy a good glass of wine and admire the fantastic view of the lake.</p>
-				<p>On the southern shore you'll find Bellagio, probably the most famous location in lake Como. Thanks to its particular position, you can enjoy breathtaking view of the lake from both sides of the town.</p>
-				<p>Lake Como is surrounded by high mountains and cliffs. These characteristics make Lake Como different from the other Italian lakes and unique for the range of experiences it can offer to its visitors. A narrow road runs up its western coast towards Switzerland and sits up high above the water, with the charming towns scattered beneath it. Famous for its beautifully kept public gardens and historic villas, it's easy to see why this location is considered one of the most charming in Europe.</p>
-				<p>Join us and have a great time!</p>
+			<div class="col-sm-12">
+			<h1>Discover Lake Como</h1>
+			<p class="intro">Family and friends, <span>Welcome to Lake Como</span>! <br/>Take a few minutes and preview the area by watching this video.</p>
+				<div class="embed-responsive embed-responsive-16by9">
+				  	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KhLXr2HkyG8" frameborder="0" allowfullscreen></iframe>
+			  	</div>
+		  	</div>
+		  	<div class="col-sm-6 col-sm-offset-3">
+		  		<h4>Where should I stay?</h4>
+				<p class="first">Well, the good news is that everything is in the range of 10 kilometers. The bad news is public transport is not as efficient as in a city.
+				However here's some indications.</p>
+				<p><span class="focus">Menaggio</span> is the village where the party will take place, it could be a good choice for if you don't want to move too much after having a few drinks.</p>
+				<p><span class="focus">Lenno</span>, <span class="focus">Tremezzo</span>, <span class="focus">Griante</span>, <span class="focus">Ossuccio</span> and <span class="focus">Mezzegra</span> are all villages adjacent to Menaggio, recently unified in a single municipality known as <span class="focus">Tremezzina</span>. If you are coming by car, or planning to rent a bike/scooter to move around then they can be a good choice.</p>
+				<p><span class="focus">Tremezzo</span> is probably the most charming between the villages, and it's where the civil ceremony will take place.</p>
+				
+				<p><span class="focus">Join us</span> and have a great time!</p>
+			</div>
 			</div>	
-			<div class="col-xs-12 col-sm-4" id="map">
-				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9t3YUbu86rpFnw-LduchnslcmPGsWW1k&signed_in=true&callback=initMap"></script>
-		 	</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row gallery-grid">
-			<div class="col-xs-12">
-				<h3>What to see?</h3>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Mount Galbiga</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('hiking')"><img width="300" height="225" src="assets/images/hiking-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('hiking')">Experience heartbreaking views</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Isola Comacina</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('comacina')"><img width="300" height="225" src="assets/images/comacina-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('comacina')">History, mystery, adventure</a>
-			</div>	
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Sighignola</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('sighignola')"><img width="300" height="225" src="assets/images/sighignola-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('sighignola')">Balcony of Italy</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Villa Balbianello</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('balbianello')"><img width="300" height="225" src="assets/images/balbianello-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('balbianello')">Walk through its terraced gardens</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Villa Carlotta</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('carlotta')"><img width="300" height="225" src="assets/images/carlotta-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('carlotta')">Discover the botanical gardens</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Lenno</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('lenno')"><img width="300" height="225" src="assets/images/lenno-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('lenno')">Have a walk and relax</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Bellagio</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('bellagio')"><img width="300" height="225" src="assets/images/bellagio-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('bellagio')">The real one, not the casino</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Menaggio</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('menaggio')"><img width="300" height="225" src="assets/images/menaggio1-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('menaggio')">The biggest village of Lake Como</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Como</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('como')"><img width="300" height="225" src="assets/images/como1-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('como')">The charming historic city</a>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row gallery-grid">
-			<div class="col-xs-12">
-				<h3>What to eat and drink?</h3>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Parmesan Grana Padano</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('parmesan')"><img width="300" height="225" src="assets/images/parmesan1-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('parmesan')">Deliciously cheesy!</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Polenta</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('polenta')"><img width="300" height="225" src="assets/images/polenta1-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('polenta')">Speciality from the north</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Pizzoccheri</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('pizzoccheri')"><img width="300" height="225" src="assets/images/pizzoccheri1-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('pizzoccheri')">Cheesy delicious</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Valtellina Wine</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('vino')"><img width="300" height="225" src="assets/images/vino1-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('vino')">To combine with the perfect meal</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Grappa</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('grappa')"><img width="300" height="225" src="assets/images/grappa1-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('grappa')">Italy's most famous digestive</a>
-			</div>
-			<div class="col-sm-6 col-md-4 text-center">
-				<p>Limoncello</p>
-				<a href ng-click="discoverCtrl.showGalleryModal('limoncello')"><img width="300" height="225" src="assets/images/limoncello-thumb.jpg"/></a>
-				<a href ng-click="discoverCtrl.showGalleryModal('limoncello')">The most refreshing liquor</a>
-			</div>
 </section> 
+<div class="container map-container">
+	<div id="areaMap">
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9t3YUbu86rpFnw-LduchnslcmPGsWW1k&signed_in=true&callback=initMap"></script>
+	</div>
+</div>
 <footer>
 	<div class="container">
 		<div class="row">

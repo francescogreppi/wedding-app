@@ -12,12 +12,33 @@ a{
 	}
 }
 
+p {
+	&.intro{
+		margin-bottom:60px;
+	}
+
+	&.first{
+		margin-top:30px;
+	}
+	
+	span{
+		color:$color-highlight;
+		
+		&.focus{
+			text-transform: uppercase;
+		
+		}
+	}
+}
+
+
 
 // header
 .custom-header{
 	background:$color-dark-bg;
 	margin-bottom:0px;
 	min-height:70px;
+	border:none;
 	
 	a{
 		color:$color-font-light;
@@ -27,66 +48,158 @@ a{
     	font-weight:normal;
 
     	&.active{
-		color:$color-font-redish;
+		color:$color-highlight;
 		}
 	}
 	.navbar-right{
 		margin-top:10px;
+		@media (max-width: 768px) {
+				margin:40px 0;
+
+		}
+	}
+
+	.navbar-toggle {
+    	border:none;
+    	margin-top:15px;
+    	&:hover{
+    		background-color:transparent;
+    	}
+    	&:active{
+    		background-color:transparent;
+    	}
+    	&:focus{
+    		background-color:transparent;
+    	}
+    	.icon-bar{
+    		background-color:#fff;
+    		width: 30px;
+    	}
+	}
+
+	.navbar-collapse{
+		border:none;
+		box-shadow: none;
+	}
+	.nav>li>a{
+		color:$color-font-light;
+		&.active{
+		color:$color-highlight;
+		}
 	}
 	.nav>li>a:hover{
 		background-color:transparent;
-		color:$color-font-redish;
+		color:$color-highlight;
+	}
+	.nav>li>a:active{
+		background-color:transparent;
+		color:$color-highlight;
+	}
+	.nav>li>a:focus{
+		background-color:transparent;
+		color:$color-highlight;
 	}
 }
+
+
+//special for map
+
+.map-container{
+				width:100%;
+				margin:0px;
+				padding:0px;
+
+				#areaMap{
+					height:370px;
+				}
+			}
 
 // sections
 section{
 	min-height: 100%;
 	background:$color-white;
 
-	p span{
-		color:$color-font-redish;
-	}
-
 	a{
-		color:$color-font-redish;
+		color:$color-highlight;
 	}
 
 	&.main{
 		padding: 50px 0 100px;
 
 		&.home{
+			
+			@media screen and (max-width: 768px) {
+				h3{
+				    margin-top:50px;
+				 }
+			}
+			
+			
 			img{ margin:10px 0 30px}
+			
 			p{
 				padding: 0 15px;
 			}
 		}
-		&.discover{
-			#map{
-    			margin-top: 20px;
-				height:450px;
-			}
+
+		&.activities{
 			.gallery-grid{
-				
-				img{
-					box-shadow: 2px 2px 5px #888888;
+
+				figure {
+					overflow: hidden;
+					position: relative;
+					margin-bottom:30px;
 				}
 
-				p{
-					font-weight:bold;
-					margin-top:30px;
+				figure img {
+					transition: transform 0.4s;
 				}
 
-				a{
-					font-size: 18px;
-  					line-height: 24px;
+				figure:hover img,
+				figure.cs-hover img {
+					transform: translateY(-40px);
+					opacity:0.8;
+				}
+
+				figcaption {
+					position: absolute;
+					height: 40px;
+					width: 100%;
+					background: $color-dark-bg;
+					color: $color-white;
+					top: auto;
+					bottom: 0;
+					opacity: 0;
+					transform: translateY(100%);
+					transition: transform 0.4s, opacity 0.1s 0.3s;
+				}
+
+				figcaption a {
+					width:100%;
+					text-align:left;
 					display:block;
-					font-weight:normal;
-					margin-top:5px;
-					text-decoration: underline;
+					color:$color-white;
+					padding:10px;
+					span{
+						float:right;
+						color: $color-highlight2;
+					}
+				}
+
+
+				figure:hover figcaption,
+				figure.cs-hover figcaption {
+						opacity: 1;
+						transform: translateY(0px);
+						transition: transform 0.4s, opacity 0.1s;
+				}
+								
+				img{
+					width:100%;
 				}
 			}
 		}
+
 		&.area{
 			.row{
 				&.topic{
@@ -108,6 +221,31 @@ section{
 				padding: 20px 0;
 			}
 		}	
+	}
+
+	&.contact{
+		.contact-form{
+			background: $color-light-grey;
+			width:100%;
+			padding:40px;
+
+			.input-group{
+				width:100%;
+				label{
+					text-align:left;
+					display:block;
+				}
+
+				.help{
+					text-align:left;
+				}
+
+				textarea{
+					width:100%;
+					height:100px;
+				}
+			}
+		}
 	}
 }
 // footer

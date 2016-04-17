@@ -9,6 +9,7 @@ p, a{
 h1{
  font-size: 55px;
  line-height: 60px;
+ margin-bottom: 40px;
  &.hero{
  	font-family:$font-Hero;
  }
@@ -25,6 +26,7 @@ h3{
 }
 
 h4{
+ margin-top:40px;
  font-size: 28px;
  line-height: 30px;
 }
