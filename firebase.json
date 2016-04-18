@@ -1,0 +1,9 @@
+{
+  "firebase": "wedding-app-ff",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
